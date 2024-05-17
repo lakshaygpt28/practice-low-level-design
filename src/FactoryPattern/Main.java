@@ -1,6 +1,6 @@
 package FactoryPattern;
 
-public class MainClass {
+public class Main {
     public static void main(String[] args) {
         ShapeFactory shapeFactoryObj = new ShapeFactory();
         Shape shapeObj = shapeFactoryObj.getShape("RECTANGLE");
