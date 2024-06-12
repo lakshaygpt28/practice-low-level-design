@@ -16,6 +16,9 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// editor is invoker
+// cut, copy, paste, undo  are commands
+//
 public class Editor {
     public JTextArea textField;
     public String clipboard;
