@@ -91,6 +91,5 @@ public class StackOverflow {
         entity.downVote(member.getId());
     }
 
-    
 
 }
