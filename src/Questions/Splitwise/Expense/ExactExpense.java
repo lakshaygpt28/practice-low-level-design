@@ -10,6 +10,7 @@ import java.util.List;
 public class ExactExpense extends Expense {
     public ExactExpense(int id, String description, User paidBy, BigDecimal totalAmount, List<Split> splits) {
         super(id, description, paidBy, totalAmount, splits);
+        validate();
     }
 
     @Override
@@ -19,7 +20,7 @@ public class ExactExpense extends Expense {
             if (!(split instanceof ExactSplit)) {
                 return false;
             }
-            totalSplitsAmount.add(split.getAmount());
+            totalSplitsAmount = totalSplitsAmount.add(split.getAmount());
         }
         return totalSplitsAmount.equals(totalAmount);
     }
