@@ -11,5 +11,19 @@ public class JSONParserDemo {
 
         String jsonString2 = "{\"zabc\":{\"zbcde\":null,\"xml\":\"asd\"}}";
         System.out.println(jsonParser.parse(jsonString2).getValue());
+
+        String jsonString3 = "{\n" +
+                "  \"employee\": {\n" +
+                "    \"id\": 12345,\n" +
+                "    \"name\": \"Jane Smith\",\n" +
+                "    \"position\": \"Software Engineer\",\n" +
+                "    \"details\": {\n" +
+                "      \"hobbies\": [\"reading\", \"hiking\"],\n" +
+                "      \"experience\": 5\n" +
+                "    }\n" +
+                "  }\n" +
+                "}";
+        Object object = jsonParser.parse(jsonString3).getValue();
+        System.out.println(object);
     }
 }
